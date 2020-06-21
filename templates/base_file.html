@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homepage </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <ul class="navbar-nav " >
+
+           <li class="nav-item p-20 m-20"><a class="navbar-brand" href="#">Contest-Reminder</a></li>
+           <li class="nav-item"><button type= "nav-button" class=" btn-link  bg-dark" href = "index.html">
+            Home
+          </button></li>
+           <li class="nav-item "> <button type= "nav-button" class=" btn-link  p-20 m-20 bg-dark" data-toggle="modal" data-target="#staticBackdrop">
+            Register
+          </button></li>
+           <li class="nav-item"><button type= "nav-button" class=" btn-link  bg-dark " data-toggle="modal" data-target="#saticBackdrop">
+            Login
+           </button></li>
+           <li class="nav-item">
+            <button type= "nav-button" class=" btn-link bg-dark" href = "contactus.html">
+                Contact Us
+                </button>
+           </li>
+           <li class="nav-item">
+            <button type= "nav-button" class=" btn-link bg-dark" data-toggle="modal" data-target="#sticBackdrop">
+                Remove Account
+               </button>
+           </li>
+        </ul>
+
+
+
+
+
+    </nav>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Register Here</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+
+                    <form name = "register" action = "/register" method="post"  id = "registerform" >
+                      <!-- To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
+         <div class="control-group">
+           <div class="form-group floating-label-form-group controls">
+             <label>Name</label>
+             <input type="text" class="form-control" placeholder="Name" id="name" name='name' required data-validation-required-message="Please enter your name.">
+             <p class="help-block text-danger"></p>
+           </div>
+         </div>
+         <div class="control-group">
+           <div class="form-group floating-label-form-group controls">
+             <label>Email Address</label>
+             <input type="email" class="form-control" placeholder="Email Address" id="email" name="email" required data-validation-required-message="Please enter your email address.">
+             <p class="help-block text-danger"></p>
+           </div>
+         </div>
+         <br>
+         <div id="success"></div>
+         <div class="form-group">
+           <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
+         </div>
+
+                    </form>
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <!-- <button type="button" class="btn btn-primary">Understood</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="saticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Login Here</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+
+
+                <form action="/login" method = "post" name = "login" id = "login">
+                        <div class="form-group">
+                          <label for="username">Enter Name:</label>
+                          <input type="username" class="form-control" id="username" name="username">
+                            <label for="emails">Email address:</label>
+                            <input type="email" class="form-control" id="emails" name="emails">
+
+
+
+                        </div>
+                <!--        <div class="form-group">
+                            <label for="pwd">Password:</label>
+                            <input type="password" class="form-control" id="pwd">
+                        </div>  -->
+
+                        <button type="submit" class="btn btn-default bg-success">Login</button>
+                    </form>
+
+
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <!-- <button type="button" class="btn btn-primary">Understood</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="sticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Enter Account Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+
+
+                    <form action="/actions">
+                        <div class="form-group">
+
+                            <label for="email">Email address:</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Password:</label>
+                            <input type="password" class="form-control" id="pwd">
+                        </div>
+
+                        <button type="submit" class="btn btn-default bg-success">Submit</button>
+                    </form>
+
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <!-- <button type="button" class="btn btn-primary">Understood</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% block content %}
+
+    {% endblock %}
+
+
+
+    <!-- JS, Popper.js, and jQuery -->
+
+</body>
+
+
+</html>
+
+
+<!-- CSS only -->
