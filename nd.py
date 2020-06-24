@@ -1,13 +1,10 @@
-import os
-from flask import Flask, render_template, url_for, redirect,request,flash,session
-from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
-app = Flask(__name__)
-app.config['SECRET_KEY'] = 'mysecret'
+import json
+import urllib3
 
-basedir = os.path.abspath(os.path.dirname(__file__))
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'data.sqlite')
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+https = urllib3.PoolManager()
+r = https.request('GET','https://www.kontests.net/api/v1/all')
+dh = json.loads(r.data.decode('utf-8'))
 
-
-db = SQLAlchemy(app)
+for i in dh:
+    print("{}  {}".format(i["in_24_hours"],i["site"]))
+    

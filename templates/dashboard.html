@@ -29,9 +29,9 @@
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <ul class="navbar-nav " >
       <li class="nav-item p-20 m-20"><a class="navbar-brand" href="#">Contest-Reminder</a></li>
-      <li class="nav-item"><button type= "nav-button" class=" btn-link  bg-dark" href = "/logout">
+      <li class="nav-item"><a href = "/logout"><button type= "nav-button" class=" btn-link  bg-dark" >
        Logout
-     </button></li>
+     </button></a></li>
    </ul>
 </nav>
 
@@ -39,10 +39,10 @@
 <br>
 <div class = "d-flex justify-content-center">
 
-  <form action="/submitcontest" method="post">
+  <form action="/submitcontest" method="post" id = "submitcontest" name = "submitcontest">
     <h3>Enter The contest that you want to get notification of </h3>
     <br>
-    <div class="form-check ">
+
       <input class="form-check-input" type="checkbox" value="codeforces" id="codeforces" name = "codeforces">
       <label class="form-check-label" for="codeforces">
         Codeforces
@@ -50,28 +50,28 @@
 
 
 
-    </div>
+
     <br>
-      <div class="form-check ">
+
         <input class="form-check-input" type="checkbox" value="codechef" id="codechef" name = "codechef">
         <label class="form-check-label" for="codechef">
           Codechef
         </label>
-        </div>
+
 <br>
-        <div class="form-check ">
+
 
               <input class="form-check-input" type="checkbox" value="hackerank" id="hackerank" name = "hackerank">
               <label class="form-check-label" for="hackerank">
               hackerank
               </label>
               <br>
-          </div>
+
 <br>
 <br>
-    <button type="submit" class="btn btn-primary" id="details">Submit</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
   </form>
-  </div>
+
 
 
 </body>

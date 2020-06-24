@@ -22,7 +22,6 @@
 
 
 
-
 </head>
 
 <body>
@@ -31,8 +30,8 @@
         <ul class="navbar-nav " >
 
            <li class="nav-item p-20 m-20"><a class="navbar-brand" href="#">Contest-Reminder</a></li>
-           <li class="nav-item"><button type= "nav-button" class=" btn-link  bg-dark" href = "index.html">
-            Home
+           <li class="nav-item"><button type= "nav-button" class=" btn-link  bg-dark" >
+        <a href = {{url_for('basefile')}} style = "color:inherit">Home</a>
           </button></li>
            <li class="nav-item "> <button type= "nav-button" class=" btn-link  p-20 m-20 bg-dark" data-toggle="modal" data-target="#staticBackdrop">
             Register
@@ -41,12 +40,12 @@
             Login
            </button></li>
            <li class="nav-item">
-            <button type= "nav-button" class=" btn-link bg-dark" href = "contactus.html">
-                Contact Us
+            <button type = "nav-button" class=" btn-link bg-dark"  >
+              <a href = {{url_for('contactus')}} style = "color:inherit">Contact Us</a>
                 </button>
            </li>
            <li class="nav-item">
-            <button type= "nav-button" class=" btn-link bg-dark" data-toggle="modal" data-target="#sticBackdrop">
+            <li class="nav-item"><button type= "nav-button" class=" btn-link  bg-dark " data-toggle="modal" data-target="#ticBackdrop">
                 Remove Account
                </button>
            </li>
@@ -153,12 +152,12 @@
         </div>
     </div>
 
-    <div class="modal fade" id="sticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+    <div class="modal fade" id="ticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Enter Account Details</h5>
+                    <h5 class="modal-title" id="staticBackdropLabel">Remove Account Here</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -166,21 +165,29 @@
                 <div class="modal-body">
 
 
+                    <form name = "removeaccount" action = "/removeaccount" method="post"  id = "removeaccount" >
+                      <!-- To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
+         <div class="control-group">
+           <div class="form-group floating-label-form-group controls">
+             <label>Name</label>
+             <input type="text" class="form-control" placeholder="Name" id="namer" name='namer' required data-validation-required-message="Please enter your name.">
+             <p class="help-block text-danger"></p>
+           </div>
+         </div>
+         <div class="control-group">
+           <div class="form-group floating-label-form-group controls">
+             <label>Email Address</label>
+             <input type="email" class="form-control" placeholder="Email Address" id="emailer" name="emailer" required data-validation-required-message="Please enter your email address.">
+             <p class="help-block text-danger"></p>
+           </div>
+         </div>
+         <br>
+         <div id="success"></div>
+         <div class="form-group">
+           <button type="submit" class="btn btn-primary" id="sendMessageButton">Submit</button>
+         </div>
 
-                    <form action="/actions">
-                        <div class="form-group">
-
-                            <label for="email">Email address:</label>
-                            <input type="email" class="form-control" id="email">
-                        </div>
-                        <div class="form-group">
-                            <label for="pwd">Password:</label>
-                            <input type="password" class="form-control" id="pwd">
-                        </div>
-
-                        <button type="submit" class="btn btn-default bg-success">Submit</button>
                     </form>
-
 
 
 
@@ -192,6 +199,13 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+
+
 
     {% block content %}
 
