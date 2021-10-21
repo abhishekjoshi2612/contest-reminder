@@ -8,7 +8,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_table import Table
 from flask_migrate import Migrate
 import jinja2
-
+import pickle
 
 app = Flask(__name__)
 app.config.update(
@@ -188,8 +188,18 @@ def removeaccount():
     return render_template('index.html')
 
 
+@app.route("/codechef",methods = ['GET','POST'])
+def codechef():
+    return render_template('codechef.html')
 
+@app.route("/codeforces",methods = ['GET','POST'])
 
+def codeforces():
+    return render_template('codeforces.html')
+
+@app.route("/predict",methods = ['GET','POST'])
+def predict():
+    return render_template('predict.html')
 
 sched = BackgroundScheduler(daemon=True)
 sched.add_job(se,'interval',minutes= 720)
