@@ -2,21 +2,27 @@
 ### XMEME
 # GETTING STARTED:
 
---- The project is live at abhishekjoshi.pythonanywhere.com  ---
+---
+The project is live at abhishekjoshi.pythonanywhere.com 
+---
 
 
 # Prerequisites:
---- use git clone "https://github.com/abhishekjoshi2612/contest-reminder" to make a copy of the repo ---
+--- 
+use git clone "https://github.com/abhishekjoshi2612/contest-reminder" to make a copy of the repo 
+---
 
-### change directory to XMEME(directory name) folder
+ change directory to XMEME(directory name) folder
 
-### Need to have python preinstalled in system or run using gitpod.io/#https://github.com/abhishekjoshi2612/contest-reminder" on browser
+ Need to have python preinstalled in system or run using gitpod.io/#https://github.com/abhishekjoshi2612/contest-reminder" on browser
 
-### run pip install -r requirements.txt on terminal
+run pip install -r requirements.txt on terminal
 
-### run python notify.py on terminal
+run python notify.py on terminal
 
-### click on live server link shown on terminal
+click on live server link shown on terminal
+
+---
  
  
  
