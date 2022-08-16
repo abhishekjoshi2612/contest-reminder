@@ -6,16 +6,16 @@ Contest Reminder
 # GETTING STARTED :
 
 ----
-The project is live at AbhishekJoshi2612.pythonanywhere.com 
+The project is live at  [Contest Reminder Website]  
 ----
 
 
 # Prerequisites:
 ----
-use git clone https://github.com/abhishekjoshi2612/contest-reminder to make a copy of the repo 
+use git clone [ here ] to make a copy of the repo 
 
 
- change directory to XMEME(directory name) folder
+ change directory to contest-reminder(directory name) folder
 
  Need to have python preinstalled in system or run using `gitpod.io/#https://github.com/abhishekjoshi2612/contest-reminder` on browser
 
@@ -39,3 +39,5 @@ click on live server link shown on terminal
 For contribution purposes please send a pull request on https://github.com/abhishekjoshi2612/contest-reminder
 ----
 
+[Contest Reminder Website]: https://abhishekjoshi2612.pythonanywhere.com/
+[ here ] : https://github.com/abhishekjoshi2612/contest-reminder
